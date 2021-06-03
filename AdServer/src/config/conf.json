@@ -1,0 +1,5 @@
+{
+  "redis": {
+    "connection<String": "redis://redis"
+  }
+}
