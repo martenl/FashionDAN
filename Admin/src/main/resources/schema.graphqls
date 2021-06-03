@@ -1,0 +1,35 @@
+type User {
+    id:ID!
+    email:String!
+    token:String!
+}
+
+type Campaign {
+    id: ID!
+    name: String!
+    startDate: String!
+    endDate: String!
+    token: String!
+}
+
+type Query {
+    getCampaigns(page: Int!): [Campaign]!
+    getCampaign(id: ID!): Campaign
+    hello(count: Int): String!
+}
+
+input CreateCampaignInput {
+    name: String!
+}
+
+type Mutation {
+    #user mutations
+    login(email:String!, password:String!):User
+    logout(email:String!):Boolean
+    #campaign mutations
+    createCampaign(name: String!): Campaign!
+    startCampaign(id:ID!, startDate:Int):Boolean
+    uploadCreative(creativeFile: Upload!):String!
+}
+
+scalar Upload
