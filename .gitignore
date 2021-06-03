@@ -137,5 +137,7 @@ Admin/.gitignore
 Admin/.mvn/
 Admin/mvnw
 Admin/mvnw.cmd
-Common/
+Common/Common.iml
 FashionDAN.iml
+Admin/src/main/webapp/WEB-INF/view/client/node
+files/*
